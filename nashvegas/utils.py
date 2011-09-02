@@ -56,10 +56,10 @@ def get_sql_for_new_models(apps=None):
             
             seen_models.add(model)
             created_models.add(model)
-            statements.append("### New Model: %s.%s" % (
-                app_name,
-                str(model).replace("'>", "").split(".")[-1]
-            ))
+#            statements.append("### New Model: %s.%s" % (
+#                app_name,
+#                str(model).replace("'>", "").split(".")[-1]
+#            ))
             
             for refto, refs in references.items():
                 pending_references.setdefault(refto, []).extend(refs)
